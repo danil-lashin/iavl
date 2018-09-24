@@ -127,11 +127,12 @@
     "crypto/tmhash",
     "libs/common",
     "libs/db",
+    "libs/errors",
     "libs/log",
     "libs/test"
   ]
-  revision = "d419fffe18531317c28c29a292ad7d253f6cafdf"
-  version = "v0.24.0"
+  revision = "0c9c3292c918617624f6f3fbcd95eceade18bcd5"
+  version = "v0.25.0"
 
 [[projects]]
   name = "github.com/tendermint/tmlibs"
@@ -155,6 +156,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "d54ae4223968140ca4b26491926b5adddd60268a5910134228cc12ad35918e94"
+  inputs-digest = "121a2106e8dae81a48574926bdbadef151c4f2adbf3ef64f379e53d1fb7630b8"
   solver-name = "gps-cdcl"
   solver-version = 1
