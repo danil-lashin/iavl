@@ -154,7 +154,8 @@
   version = "v0.7.0"
 
 [[projects]]
-  digest = "1:0d67cc4e709f4b8e04e42e2d6106895aab168353e32d9a2154eb5f1057b4f9ed"
+  branch = "develop"
+  digest = "1:87dc06afb2b713a3f988ef325d50d7c77c7c3ade43f9d522846633125206c434"
   name = "github.com/tendermint/tendermint"
   packages = [
     "crypto/tmhash",
@@ -165,8 +166,7 @@
     "libs/test",
   ]
   pruneopts = "UT"
-  revision = "90eda9bfb6e6daeed1c8015df41cb36772d91778"
-  version = "v0.25.1-rc0"
+  revision = "9795e12ef2eae822733e5add1300bdd37caf5d7c"
 
 [[projects]]
   digest = "1:f66f7a4940150cc63a6cf4c24adb9752ee9f713f9f43a279a04feb939531f216"
