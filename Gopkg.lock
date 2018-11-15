@@ -165,8 +165,7 @@
     "libs/test",
   ]
   pruneopts = "UT"
-  revision = "80d0a362500fea2dd089258319075a54e5d40a2d"
-  version = "v0.26.1"
+  revision = "1ce24a62828e9920efa7d7741b5f63f908c7c706"
 
 [[projects]]
   digest = "1:f66f7a4940150cc63a6cf4c24adb9752ee9f713f9f43a279a04feb939531f216"
