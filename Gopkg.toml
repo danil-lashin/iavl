@@ -7,8 +7,8 @@
   name = "github.com/tendermint/go-amino"
 
 [[constraint]]
-  version = "^0.26.2"
-  name = "github.com/tendermint/tendermint"
+  name = "github.com/danil-lashin/tendermint"
+  revision = "11c793888ec03abf1ff57cda5c00702adcf44ae6"
 
 [prune]
   go-tests = true

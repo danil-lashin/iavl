@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"fmt"
 
-	cmn "github.com/tendermint/tendermint/libs/common"
-	dbm "github.com/tendermint/tendermint/libs/db"
+	cmn "github.com/danil-lashin/tendermint/libs/common"
+	dbm "github.com/danil-lashin/tendermint/libs/db"
 )
 
 // ErrVersionDoesNotExist is returned if a requested version does not exist.

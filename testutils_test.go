@@ -9,8 +9,8 @@ import (
 	mrand "math/rand"
 
 	"github.com/tendermint/go-amino"
-	cmn "github.com/tendermint/tendermint/libs/common"
-	"github.com/tendermint/tendermint/libs/db"
+	cmn "github.com/danil-lashin/tendermint/libs/common"
+	"github.com/danil-lashin/tendermint/libs/db"
 )
 
 func randstr(length int) string {

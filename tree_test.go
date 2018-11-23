@@ -8,11 +8,11 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/libs/db"
+	"github.com/danil-lashin/tendermint/libs/db"
 
 	mathrand "math/rand"
 
-	cmn "github.com/tendermint/tendermint/libs/common"
+	cmn "github.com/danil-lashin/tendermint/libs/common"
 )
 
 var testLevelDB bool

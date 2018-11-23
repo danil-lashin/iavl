@@ -2,6 +2,19 @@
 
 
 [[projects]]
+  digest = "1:b6b86ce0f187f8358d8906d747ebd82d0c049ee570057e7af525458b240b30ba"
+  name = "github.com/danil-lashin/tendermint"
+  packages = [
+    "crypto/tmhash",
+    "libs/common",
+    "libs/db",
+    "libs/log",
+    "libs/test",
+  ]
+  pruneopts = "UT"
+  revision = "11c793888ec03abf1ff57cda5c00702adcf44ae6"
+
+[[projects]]
   digest = "1:a2c1d0e43bd3baaa071d1b9ed72c27d78169b2b269f71c105ac4ba34b1be4a39"
   name = "github.com/davecgh/go-spew"
   packages = ["spew"]
@@ -154,21 +167,6 @@
   version = "v0.7.0"
 
 [[projects]]
-  digest = "1:d8d41f6c1146d3b4cde8b987a961d69ec02e52311bd59b8fc00116da42bd401e"
-  name = "github.com/tendermint/tendermint"
-  packages = [
-    "crypto/tmhash",
-    "libs/common",
-    "libs/db",
-    "libs/errors",
-    "libs/log",
-    "libs/test",
-  ]
-  pruneopts = "UT"
-  revision = "d5a05eccba18b772439f57e91ddad54091aab952"
-  version = "v0.26.2"
-
-[[projects]]
   digest = "1:f66f7a4940150cc63a6cf4c24adb9752ee9f713f9f43a279a04feb939531f216"
   name = "github.com/tendermint/tmlibs"
   packages = [
@@ -195,14 +193,14 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/danil-lashin/tendermint/crypto/tmhash",
+    "github.com/danil-lashin/tendermint/libs/common",
+    "github.com/danil-lashin/tendermint/libs/db",
+    "github.com/danil-lashin/tendermint/libs/test",
     "github.com/stretchr/testify/assert",
     "github.com/stretchr/testify/require",
     "github.com/tendermint/go-amino",
     "github.com/tendermint/iavl",
-    "github.com/tendermint/tendermint/crypto/tmhash",
-    "github.com/tendermint/tendermint/libs/common",
-    "github.com/tendermint/tendermint/libs/db",
-    "github.com/tendermint/tendermint/libs/test",
     "golang.org/x/crypto/ripemd160",
     "golang.org/x/crypto/sha3",
   ]
