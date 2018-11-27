@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	cmn "github.com/danil-lashin/tendermint/libs/common"
-	"github.com/danil-lashin/tendermint/libs/db"
+	cmn "github.com/tendermint/tendermint/libs/common"
+	"github.com/tendermint/tendermint/libs/db"
 )
 
 // This file implement fuzz testing by generating programs and then running

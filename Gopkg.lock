@@ -2,25 +2,12 @@
 
 
 [[projects]]
-  digest = "1:857021d674c3a5d4dc644e43bc96f302d052ce1d531739839494f9818eb50f31"
-  name = "github.com/danil-lashin/tendermint"
-  packages = [
-    "crypto/tmhash",
-    "libs/common",
-    "libs/db",
-    "libs/log",
-    "libs/test",
-  ]
-  pruneopts = "UT"
-  revision = "4f244ca48cb089f0ea0c88dc608c525281513435"
-
-[[projects]]
-  digest = "1:a2c1d0e43bd3baaa071d1b9ed72c27d78169b2b269f71c105ac4ba34b1be4a39"
+  digest = "1:ffe9824d294da03b391f44e1ae8281281b4afc1bdaa9588c9097785e3af10cec"
   name = "github.com/davecgh/go-spew"
   packages = ["spew"]
   pruneopts = "UT"
-  revision = "346938d642f2ec3594ed81d874461961cd0faa76"
-  version = "v1.1.0"
+  revision = "8991bc29aa16c548c550c7ff78260e27b9ab7c73"
+  version = "v1.1.1"
 
 [[projects]]
   digest = "1:704b145137b5555c6bac6a7e52875e4df8a0a1b7ea74aaae864abcab61e672b0"
@@ -35,20 +22,20 @@
   version = "v0.6.0"
 
 [[projects]]
-  digest = "1:31a18dae27a29aa074515e43a443abfd2ba6deb6d69309d8d7ce789c45f34659"
+  digest = "1:4062bc6de62d73e2be342243cf138cf499b34d558876db8d9430e2149388a4d8"
   name = "github.com/go-logfmt/logfmt"
   packages = ["."]
   pruneopts = "UT"
-  revision = "390ab7935ee28ec6b286364bba9b4dd6410cb3d5"
-  version = "v0.3.0"
+  revision = "07c9b44f60d7ffdfb7d8efe1ad539965737836dc"
+  version = "v0.4.0"
 
 [[projects]]
-  digest = "1:c4a2528ccbcabf90f9f3c464a5fc9e302d592861bbfd0b7135a7de8a943d0406"
+  digest = "1:586ea76dbd0374d6fb649a91d70d652b7fe0ccffb8910a77468e7702e7901f3d"
   name = "github.com/go-stack/stack"
   packages = ["."]
   pruneopts = "UT"
-  revision = "259ab82a6cad3992b4e21ff5cac294ccb06474bc"
-  version = "v1.7.0"
+  revision = "2fee6af1a9795aafbe0253a0cfbdf668e1fb8a9a"
+  version = "v1.8.0"
 
 [[projects]]
   digest = "1:bfc758d5a03d57d97226fac6934551c01bd76612adb119c177395b057a0a46db"
@@ -123,7 +110,7 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:44c20574377132acef0941bf0cb5dd1ea2485fb649f66bd7c56bb9cc3a0ab18f"
+  digest = "1:786c36d675e2f6f2462e9f853aba754ae8f84fed6c103732aac697a666a70ae3"
   name = "github.com/syndtr/goleveldb"
   packages = [
     "leveldb",
@@ -140,23 +127,23 @@
     "leveldb/util",
   ]
   pruneopts = "UT"
-  revision = "0d5a0ceb10cf9ab89fdd744cc8c50a83134f6697"
+  revision = "353a9fca669c44dedb58d5a074f6d052fb0f58e0"
 
 [[projects]]
-  digest = "1:10b3a599325740c84a7c81f3f3cb2e1fdb70b3ea01b7fa28495567a2519df431"
+  digest = "1:ad9c4c1a4e7875330b1f62906f2830f043a23edb5db997e3a5ac5d3e6eadf80a"
   name = "github.com/tendermint/go-amino"
   packages = ["."]
   pruneopts = "UT"
-  revision = "6dcc6ddc143e116455c94b25c1004c99e0d0ca12"
-  version = "v0.14.0"
+  revision = "dc14acf9ef15f85828bfbc561ed9dd9d2a284885"
+  version = "v0.14.1"
 
 [[projects]]
-  digest = "1:2c971a45c89ca2ccc735af50919cdee05fbdc54d4bf50625073693300e31ead8"
+  digest = "1:ad9c4c1a4e7875330b1f62906f2830f043a23edb5db997e3a5ac5d3e6eadf80a"
   name = "github.com/tendermint/go-wire"
   packages = ["."]
   pruneopts = "UT"
-  revision = "faa6e731944e2b7b6a46ad202902851e8ce85bee"
-  version = "v0.12.0"
+  revision = "dc14acf9ef15f85828bfbc561ed9dd9d2a284885"
+  version = "v0.14.1"
 
 [[projects]]
   digest = "1:cf26b8a19978fffa524c9b9a6ddab027268831b49c6ca1c700b61b378d1d36b5"
@@ -167,7 +154,21 @@
   version = "v0.7.0"
 
 [[projects]]
-  digest = "1:f66f7a4940150cc63a6cf4c24adb9752ee9f713f9f43a279a04feb939531f216"
+  digest = "1:e98fdcff6e2c3cbf18dac7b6695ec2eee83cfff4c1dc5db8f9448028280244a8"
+  name = "github.com/tendermint/tendermint"
+  packages = [
+    "crypto/tmhash",
+    "libs/common",
+    "libs/db",
+    "libs/log",
+    "libs/test",
+  ]
+  pruneopts = "UT"
+  revision = "b771798d48c27630fb37b74c8e229da5a8b2042c"
+  version = "v0.26.4"
+
+[[projects]]
+  digest = "1:ed6aeee6d7ef8351ffcce14e511ff86d83c90a805f28fffb5e6d9853cd98da8c"
   name = "github.com/tendermint/tmlibs"
   packages = [
     "common",
@@ -175,32 +176,32 @@
     "log",
   ]
   pruneopts = "UT"
-  revision = "49596e0a1f48866603813df843c9409fc19805c6"
-  version = "v0.9.0"
+  revision = "1b9b5652a199ab0be2e781393fb275b66377309d"
+  version = "v0.7.0"
 
 [[projects]]
   branch = "master"
-  digest = "1:adbbe8e62fac8ca28b576e82d87210a77a990f4cc73353085b2b2cde1bc9ff3b"
+  digest = "1:0a733d91d2a819c502ba47ecddfd51a9938b3d61213d24d559947aed81230f70"
   name = "golang.org/x/crypto"
   packages = [
     "ripemd160",
     "sha3",
   ]
   pruneopts = "UT"
-  revision = "a49355c7e3f8fe157a85be2f77e6e269a0f89602"
+  revision = "e657309f52e71501f9934566ac06dc5c2f7f11a1"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
-    "github.com/danil-lashin/tendermint/crypto/tmhash",
-    "github.com/danil-lashin/tendermint/libs/common",
-    "github.com/danil-lashin/tendermint/libs/db",
-    "github.com/danil-lashin/tendermint/libs/test",
     "github.com/stretchr/testify/assert",
     "github.com/stretchr/testify/require",
     "github.com/tendermint/go-amino",
     "github.com/tendermint/iavl",
+    "github.com/tendermint/tendermint/crypto/tmhash",
+    "github.com/tendermint/tendermint/libs/common",
+    "github.com/tendermint/tendermint/libs/db",
+    "github.com/tendermint/tendermint/libs/test",
     "golang.org/x/crypto/ripemd160",
     "golang.org/x/crypto/sha3",
   ]
