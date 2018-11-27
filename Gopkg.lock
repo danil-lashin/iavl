@@ -2,7 +2,7 @@
 
 
 [[projects]]
-  digest = "1:b6b86ce0f187f8358d8906d747ebd82d0c049ee570057e7af525458b240b30ba"
+  digest = "1:857021d674c3a5d4dc644e43bc96f302d052ce1d531739839494f9818eb50f31"
   name = "github.com/danil-lashin/tendermint"
   packages = [
     "crypto/tmhash",
@@ -12,7 +12,7 @@
     "libs/test",
   ]
   pruneopts = "UT"
-  revision = "11c793888ec03abf1ff57cda5c00702adcf44ae6"
+  revision = "7f73a6464cd3a374924e709e26f860787266982b"
 
 [[projects]]
   digest = "1:a2c1d0e43bd3baaa071d1b9ed72c27d78169b2b269f71c105ac4ba34b1be4a39"
