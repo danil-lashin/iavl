@@ -12,7 +12,7 @@
     "libs/test",
   ]
   pruneopts = "UT"
-  revision = "7f73a6464cd3a374924e709e26f860787266982b"
+  revision = "4f244ca48cb089f0ea0c88dc608c525281513435"
 
 [[projects]]
   digest = "1:a2c1d0e43bd3baaa071d1b9ed72c27d78169b2b269f71c105ac4ba34b1be4a39"
