@@ -8,7 +8,7 @@
 
 [[constraint]]
   name = "github.com/tendermint/tendermint"
-  version = "=0.26.4"
+  revision = "daddebac29d9f1258f7e93282e84709bd16a0acd"
 
 [prune]
   go-tests = true
