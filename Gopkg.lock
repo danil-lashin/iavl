@@ -154,7 +154,7 @@
   version = "v0.7.0"
 
 [[projects]]
-  digest = "1:0bedd06a8b962107b7df59ff129c03083021fd993b314642f42f6068504c77e7"
+  digest = "1:8295603ed6d5a41a46c1397756fc39d85517d199e2e91980ab7a5ee01882b27b"
   name = "github.com/tendermint/tendermint"
   packages = [
     "crypto/merkle",
@@ -165,8 +165,8 @@
     "libs/test",
   ]
   pruneopts = "UT"
-  revision = "aa40cfcbb97fac3832b47ccdcf99c6b7fb504cb2"
-  version = "v0.28.0"
+  revision = "4d7b29cd8f8ef998cf8f7141f3a100b0a4fa718d"
+  version = "v0.29.1"
 
 [[projects]]
   digest = "1:ed6aeee6d7ef8351ffcce14e511ff86d83c90a805f28fffb5e6d9853cd98da8c"
