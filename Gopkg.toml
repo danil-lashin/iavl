@@ -4,11 +4,11 @@
 
 [[constraint]]
   name = "github.com/tendermint/go-amino"
-  version = "v0.14.0"
+  version = "0.14.0"
 
 [[constraint]]
   name = "github.com/tendermint/tendermint"
-  version = "v0.30.0"
+  version = "0.31.0"
 
 [prune]
   go-tests = true
