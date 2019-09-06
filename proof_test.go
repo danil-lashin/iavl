@@ -1,3 +1,4 @@
+// nolint: errcheck
 package iavl
 
 import (
@@ -7,9 +8,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/go-amino"
-	"github.com/tendermint/tendermint/libs/db"
-	"github.com/tendermint/tendermint/libs/test"
+	amino "github.com/tendermint/go-amino"
+	cmn "github.com/tendermint/iavl/common"
+	db "github.com/tendermint/tm-db"
 )
 
 func TestTreeGetWithProof(t *testing.T) {
@@ -17,7 +18,7 @@ func TestTreeGetWithProof(t *testing.T) {
 	require := require.New(t)
 	for _, ikey := range []byte{0x11, 0x32, 0x50, 0x72, 0x99} {
 		key := []byte{ikey}
-		tree.Set(key, []byte(random.Str(8)))
+		tree.Set(key, []byte(cmn.RandStr(8)))
 	}
 	root := tree.WorkingHash()
 
@@ -61,7 +62,7 @@ func TestTreeKeyExistsProof(t *testing.T) {
 	// insert lots of info and store the bytes
 	allkeys := make([][]byte, 200)
 	for i := 0; i < 200; i++ {
-		key := randstr(20)
+		key := cmn.RandStr(20)
 		value := "value_for_" + key
 		tree.Set([]byte(key), []byte(value))
 		allkeys[i] = []byte(key)
@@ -215,7 +216,7 @@ func verifyProof(t *testing.T, proof *RangeProof, root []byte) {
 
 	// Random mutations must not verify
 	for i := 0; i < 1e4; i++ {
-		badProofBytes := test.MutateByteSlice(proofBytes)
+		badProofBytes := cmn.MutateByteSlice(proofBytes)
 		var badProof = new(RangeProof)
 		err := cdc.UnmarshalBinaryLengthPrefixed(badProofBytes, badProof)
 		if err != nil {
@@ -227,7 +228,7 @@ func verifyProof(t *testing.T, proof *RangeProof, root []byte) {
 			continue // didn't mutate successfully.
 		}
 		// may be invalid... errors are okay
-		if err == nil {
+		if err == nil { // nolint:govet
 			assert.Errorf(t, badProof.Verify(root),
 				"Proof was still valid after a random mutation:\n%X\n%X",
 				proofBytes, badProofBytes)

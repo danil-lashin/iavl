@@ -4,9 +4,11 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/tendermint/go-amino"
+	"github.com/pkg/errors"
+
+	amino "github.com/tendermint/go-amino"
+	cmn "github.com/tendermint/iavl/common"
 	"github.com/tendermint/tendermint/crypto/tmhash"
-	cmn "github.com/tendermint/tendermint/libs/common"
 )
 
 var (
@@ -81,7 +83,10 @@ func (pin proofInnerNode) Hash(childHash []byte) []byte {
 		panic(fmt.Sprintf("Failed to hash proofInnerNode: %v", err))
 	}
 
-	hasher.Write(buf.Bytes())
+	_, err = hasher.Write(buf.Bytes())
+	if err != nil {
+		panic(err)
+	}
 	return hasher.Sum(nil)
 }
 
@@ -129,7 +134,11 @@ func (pln proofLeafNode) Hash() []byte {
 	if err != nil {
 		panic(fmt.Sprintf("Failed to hash proofLeafNode: %v", err))
 	}
-	hasher.Write(buf.Bytes())
+	_, err = hasher.Write(buf.Bytes())
+	if err != nil {
+		panic(err)
+
+	}
 
 	return hasher.Sum(nil)
 }
@@ -153,7 +162,7 @@ func (node *Node) pathToLeaf(t *ImmutableTree, key []byte, path *PathToLeaf) (*N
 		if bytes.Equal(node.key, key) {
 			return node, nil
 		}
-		return node, cmn.NewError("key does not exist")
+		return node, errors.New("key does not exist")
 	}
 
 	if bytes.Compare(key, node.key) < 0 {
