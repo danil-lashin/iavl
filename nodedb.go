@@ -8,7 +8,7 @@ import (
 	"sync"
 
 	"github.com/tendermint/tendermint/crypto/tmhash"
-	dbm "github.com/tendermint/tendermint/libs/db"
+	dbm "github.com/tendermint/tm-db"
 )
 
 const (
@@ -103,8 +103,9 @@ func (ndb *nodeDB) SaveNode(node *Node) {
 	}
 
 	// Save node bytes to db.
-	buf := new(bytes.Buffer)
-	if err := node.writeBytes(buf); err != nil {
+	var buf bytes.Buffer
+	buf.Grow(node.aminoSize())
+	if err := node.writeBytes(&buf); err != nil {
 		panic(err)
 	}
 	ndb.batch.Set(ndb.nodeKey(node.hash), buf.Bytes())
@@ -368,7 +369,7 @@ func (ndb *nodeDB) saveRoot(hash []byte, version int64) error {
 	defer ndb.mtx.Unlock()
 
 	if version != ndb.getLatestVersion()+1 {
-		return fmt.Errorf("Must save consecutive versions. Expected %d, got %d", ndb.getLatestVersion()+1, version)
+		return fmt.Errorf("must save consecutive versions. Expected %d, got %d", ndb.getLatestVersion()+1, version)
 	}
 
 	key := ndb.rootKey(version)
