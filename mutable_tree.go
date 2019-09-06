@@ -467,6 +467,30 @@ func (tree *MutableTree) deleteVersionsFrom(version int64) error {
 	return nil
 }
 
+func (tree *MutableTree) DeleteVersionsRange(from int64, to int64) error {
+	if from <= 0 {
+		return cmn.NewError("version must be greater than 0")
+	}
+
+	lastestVersion := tree.ndb.getLatestVersion()
+	if to == lastestVersion {
+		return cmn.NewError("version must be less than latest version")
+	}
+
+	for ; from <= to; from++ {
+		if from == tree.version {
+			return cmn.NewError("cannot delete latest saved version (%d)", version)
+		}
+		if _, ok := tree.versions[from]; !ok {
+			return cmn.ErrorWrap(ErrVersionDoesNotExist, "")
+		}
+		tree.ndb.DeleteVersion(from, false)
+		delete(tree.versions, from)
+	}
+	tree.ndb.Commit()
+	return nil
+}
+
 // Rotate right and return the new node and orphan.
 func (tree *MutableTree) rotateRight(node *Node) (*Node, *Node) {
 	version := tree.version + 1
