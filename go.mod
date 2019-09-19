@@ -1,4 +1,4 @@
-module github.com/tendermint/iavl
+module github.com/danil-lashin/iavl
 
 go 1.12
 
